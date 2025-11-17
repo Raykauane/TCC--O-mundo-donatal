@@ -1,0 +1,101 @@
+/* --- Estilo geral --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #800080 0%, #4b004b 100%);
+    color: #fff;
+}
+
+/* --- Cabeçalho --- */
+header {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+/* --- Introdução --- */
+.introducao {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.introducao h2 {
+    color: #ffb6c1;
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #ffc0cb;
+    line-height: 1.6;
+}
+
+/* --- Categorias / Cards --- */
+.categorias {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.categorias h2 {
+    color: #ff69b4;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #ff69b4;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #ffb6c1;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #ffc0cb;
+    font-size: 0.95em;
+}
+
+/* --- Rodapé --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95em;
+    color: #ff69b4;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+}

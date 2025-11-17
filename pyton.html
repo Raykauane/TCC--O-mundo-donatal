@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo4.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Saiba Mais Sobre a Comida</h1>
+        <p>Variações</p>   
+    </header>
+    <a href="index.html" class="btn-voltar">
+        <span class="setinha">🠔</span>
+        Voltar
+       </a>
+    <section>
+        <h2>O que vamos aprender?</h2>
+        <ul>
+            <li>Comidas Tipícas</li>
+            <li>Decoração</li>
+            <li>Simbolos de Natal</li>
+            <li>Tradições</li>
+        </ul>
+
+        <button onclick="mostrarDetalhes()">Ver detalhes do Natal</button>
+        <div class="detalhes" id="detalhes">
+            <p>Nossa site é 100% prático, com informações reais</p>
+        </div>
+    </section>
+
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            if (detalhes.display === "block")   {
+                detalhes.style.display = "none";
+            } else {
+                detalhes.style.display = "block";
+            }
+         }
+         </script>
+</body>
+</html>

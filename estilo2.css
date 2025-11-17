@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background-color: rgb(212, 22, 44);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 70px;
+}
+
+.lista-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.lista-menu li {
+    position: relative;
+}
+
+.lista-menu li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.lista-menu li a:hover {
+    background-color: rgba(221, 30, 30, 0.947);
+    border-radius: 4px ;
+}
+
+/* SUBMENU */
+.lista-menu li ul {
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0;
+    list-style: none;
+    background-color:rgba(227, 25, 25, 0.81);
+    min-width: 180px;
+}
+
+.lista-menu li ul li a {
+    padding: 10px 15px;
+    gap: 8px;
+}
+
+.lista-menu li:hover ul {
+    display: block;
+}
+
+/* --------------------------- */
+/*      MENU RESPONSIVO        */
+/* --------------------------- */
+
+/* Oculta o botão no desktop */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* PARA TELAS MENORES — até 768px */
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .container-esquerda {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Mostra o botão hamburguer */
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+
+    /* Esconde o menu por padrão */
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(212, 22, 44);
+        padding: 10px 0;
+    }
+
+    /* Exibe o menu quando ativado com classe "ativo" */
+    .lista-menu.ativo {
+        display: flex;
+    }
+
+    .lista-menu li {
+        width: 100%;
+    }
+
+    .lista-menu li a {
+        padding: 12px 15px;
+    }
+
+    /* Submenu em modo responsivo */
+    .lista-menu li ul {
+        position: static;
+        width: 100%;
+    }
+
+    .lista-menu li:hover ul {
+        display: none; /* Desativa hover no mobile */
+    }
+
+    .lista-menu li.abrir-submenu ul {
+        display: block; /* Exibe o submenu quando clicado */
+    }
+}
+
+/* PARA TELAS MUITO PEQUENAS — até 430px */
+@media (max-width: 430px) {
+    .logo {
+        height: 55px;
+    }
+
+    .lista-menu li a {
+        font-size: 14px;
+    }
+}
