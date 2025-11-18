@@ -1,0 +1,41 @@
+/* Torna os elementos expansivos e adaptáveis */
+.cards {
+    display: flex;              /* organiza em linha */
+    justify-content: center;    /* centraliza horizontalmente */
+    gap: 30px;                  /* espaço entre os cards */
+    flex-wrap: wrap;            /* permite que quebrem linha = expansivo */
+    width: 100%;                /* ocupa toda largura possível */
+}
+
+/* Menu expansivo */
+.lista-menu {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;            /* permite expandir e quebrar */
+}
+
+/* Imagens expansivas */
+.introducao img {
+    width: 100%;
+    max-width: 900px;           /* limite máximo */
+    height: auto;
+}
+
+/* Conteúdo geral expansivo */
+.conteudo {
+    width: 100%;
+    max-width: 1400px;          /* centraliza e expande sem exagerar */
+    margin: 120px auto 0 auto;
+    padding: 20px;
+}
+
+/* Responsividade (torna realmente expansivo em telas pequenas) */
+@media (max-width: 900px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .lista-menu {
+        justify-content: center;
+    }
+}
